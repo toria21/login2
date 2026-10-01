@@ -1,0 +1,274 @@
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sistema Web - Login</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #eef2f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            width: 850px;
+            max-width: 100%;
+            min-height: 480px;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.10);
+        }
+
+        .esquerda {
+            width: 45%;
+            background: linear-gradient(135deg, #dceaf5, #b7d4e8);
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2476a8;
+            margin-bottom: 50px;
+        }
+
+        .esquerda h1 {
+            color: #ffffff;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .descricao {
+            color: #57768d;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 35px;
+        }
+
+        .informacao {
+            border-left: 4px solid #55b9e8;
+            padding: 12px;
+            color: #52748d;
+            font-size: 13px;
+            line-height: 1.6;
+            background: rgba(255,255,255,0.25);
+        }
+
+        .direita {
+            width: 55%;
+            padding: 45px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .direita h2 {
+            color: #269bc5;
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .subtitulo {
+            color: #7b8b96;
+            font-size: 13px;
+            margin-bottom: 30px;
+        }
+
+        .campo {
+            margin-bottom: 18px;
+        }
+
+        .campo label {
+            display: block;
+            font-size: 13px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #d8dfe5;
+            border-radius: 7px;
+            outline: none;
+            font-size: 13px;
+        }
+
+        .campo input:focus {
+            border-color: #269bc5;
+        }
+
+        .opcoes {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+            margin-bottom: 22px;
+            gap: 8px;
+        }
+
+        .lembrar {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #687782;
+        }
+
+        a {
+            color: #2476b8;
+            text-decoration: none;
+        }
+
+        .botao {
+            width: 100%;
+            padding: 13px;
+            background: linear-gradient(90deg, #2485d0, #164eaa);
+            border: none;
+            border-radius: 7px;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .botao:hover {
+            opacity: 0.9;
+        }
+
+        .cadastro {
+            text-align: center;
+            margin-top: 22px;
+            color: #7b8b96;
+            font-size: 12px;
+        }
+
+        @media (max-width: 650px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .esquerda, .direita {
+                width: 100%;
+            }
+
+            .esquerda {
+                padding: 30px;
+            }
+
+            .logo {
+                margin-bottom: 25px;
+            }
+
+            .esquerda h1 {
+                font-size: 25px;
+            }
+
+            .direita {
+                padding: 35px 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="esquerda">
+
+            <div class="logo">SISTEMA<span>WEB</span></div>
+
+            <h1>Bem-vindo!</h1>
+
+            <p class="descricao">
+                A tecnologia conecta pessoas e facilita o acesso
+                às informações. Entre na sua conta e aproveite
+                uma experiência simples e organizada.
+            </p>
+
+            <div class="informacao">
+                <strong>Gestão simples e eficiente</strong>
+                <br>
+                Tenha acesso às suas informações de forma
+                rápida, segura e organizada.
+            </div>
+
+        </div>
+
+        <div class="direita">
+
+            <h2>Entrar na sua conta</h2>
+
+            <p class="subtitulo">
+                Informe seus dados para acessar o sistema.
+            </p>
+
+            <form>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Digite seu e-mail"
+                        required>
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha</label>
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="Digite sua senha"
+                        required>
+                </div>
+
+                <div class="opcoes">
+
+                    <label class="lembrar">
+                        <input type="checkbox" name="lembrar">
+                        Lembrar de mim
+                    </label>
+
+                    <a href="#">Esqueci minha senha</a>
+
+                </div>
+
+                <button type="submit" class="botao">
+                    Entrar
+                </button>
+
+            </form>
+
+            <p class="cadastro">
+                Ainda não possui uma conta?
+                <a href="#">Cadastre-se</a>
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
